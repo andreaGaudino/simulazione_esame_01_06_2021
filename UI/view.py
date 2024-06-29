@@ -36,7 +36,9 @@ class View(ft.UserControl):
 
         #row3
         self.nIngegneri = ft.TextField(label="Numero ingegneri")
-        row3 = ft.Row([ft.Container(self.nIngegneri, width=300)], alignment=ft.MainAxisAlignment.CENTER)
+        self.btnSimulazione = ft.ElevatedButton(text="Simulazione", on_click=self._controller.handleSimulazione)
+        row3 = ft.Row([ft.Container(self.nIngegneri, width=300),
+                       ft.Container(self.btnSimulazione, width=300)], alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row3)
 
         self.txtGrafo = ft.ListView(expand=1)
