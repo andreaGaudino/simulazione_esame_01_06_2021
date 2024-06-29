@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25deac04-5088-4b0d-bbb2-e937d4725438" name="Changes" comment="commit iniziale">
-      <change afterPath="$PROJECT_DIR$/model/geni.py" afterDir="false" />
+    <list default="true" id="25deac04-5088-4b0d-bbb2-e937d4725438" name="Changes" comment="inizio punto 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/DAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/DAO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/connector.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/database/connector.cnf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "soluzione",
@@ -104,22 +100,20 @@
       <option name="project" value="LOCAL" />
       <updated>1719581425843</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="inizio punto 2">
+      <option name="closed" value="true" />
+      <created>1719657939800</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719657939800</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit iniziale" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit iniziale" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/model.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="inizio punto 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="inizio punto 2" />
   </component>
 </project>

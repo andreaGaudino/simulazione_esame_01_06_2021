@@ -20,9 +20,9 @@ class Model:
         archi = DAO.getArchi()
         for riga in archi:
             if riga[3] == riga[4]:
-                self.graph.add_edge(self.idMap[riga[0]], self.idMap[riga[1]],weight = 2 * abs(riga[2]))
+                self.graph.add_edge(self.idMap[riga[0]], self.idMap[riga[1]],weight = float(2 * abs(riga[2])))
             else:
-                self.graph.add_edge(self.idMap[riga[0]], self.idMap[riga[1]], weight=abs(riga[2]))
+                self.graph.add_edge(self.idMap[riga[0]], self.idMap[riga[1]], weight=float(abs(riga[2])))
 
     def getAdiacenti(self, gene):
         vicini = list(self.graph.neighbors(gene))
@@ -48,7 +48,10 @@ class Model:
                 nuoviIng = round(0.7 * dizio[g])
                 nuovoDizio[g] = dizio[g] - round(0.7 * dizio[g])
                 for v in vicini:
-                    prob = float(self.graph[g][v]["weight"])/denominatore
+                    if denominatore==0:
+                        prob = 1
+                    else:
+                        prob = (float(self.graph[g][v]["weight"]))/denominatore
                     if v not in dizio:
                         nuovoDizio[v] = round(prob*nuoviIng)
                     else:
@@ -56,8 +59,12 @@ class Model:
 
             dizio = copy.deepcopy(nuovoDizio)
         print(dizio)
+        return dizio
 
 
 
     def graphDetails(self):
+        for a in list(self.graph.edges(data=True)):
+            if a[2]["weight"] == 0 :
+                print(a)
         return len(self.graph.nodes),  len(self.graph.edges)

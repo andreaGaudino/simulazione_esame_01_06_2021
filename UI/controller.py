@@ -24,6 +24,7 @@ class Controller:
 
 
     def handleCercaAdiacenti(self, e):
+        self._view.txtGeniAd.clean()
         if self.gene is None:
             self._view.create_alert("Gene non selezionato")
             self._view.update_page()
@@ -50,7 +51,12 @@ class Controller:
             self._view.update_page()
             return
 
-        self._model.simulazione(self.gene, intIng)
+        dizio = self._model.simulazione(self.gene, intIng)
+        for i in dizio:
+            self._view.txtSimulazione.controls.append(ft.Text(f"{i} - {dizio[i]}"))
+        self._view.update_page()
+
+
     def fillDD(self):
         nodi = list(self._model.graph.nodes)
         nodiDD = list(map(lambda x: ft.dropdown.Option(text=x, key=x, on_click=self.getNodo), nodi))
