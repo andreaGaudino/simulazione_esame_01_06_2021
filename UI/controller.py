@@ -16,7 +16,10 @@ class Controller:
     def handleCreaGrafo(self, e):
         pass
 
-    def handleCercaAdiacenti(self, e):
+    def handleAnalisiComp(self, e):
+        pass
+
+    def handleSetAlbum(self, e):
         pass
 
     def fillDD(self):

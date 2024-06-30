@@ -22,29 +22,34 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
         #row1
+        self.txtDurata = ft.TextField(label="Durata")
         self.btnCreaGrafo = ft.ElevatedButton(text="Crea grafo", on_click=self._controller.handleCreaGrafo)
-        row1 = ft.Row([ft.Container(self.btnCreaGrafo, width=300)], alignment=ft.MainAxisAlignment.CENTER)
+        row1 = ft.Row([ft.Container(self.txtDurata, width=300),
+                       ft.Container(self.btnCreaGrafo, width=300)],
+                      alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row1)
 
         #row 2
-        self.ddGene = ft.Dropdown(label="Gene")
-        self.btnGeniAd = ft.ElevatedButton(text="Geni adiacenti", on_click=self._controller.handleCercaAdiacenti)
-        row2 = ft.Row([ft.Container(self.ddGene, width=300),
-                       ft.Container(self.btnGeniAd, width=300)],
+        self.ddAlbum = ft.Dropdown(label="Album")
+        self.btnAnalisiComp = ft.ElevatedButton(text="Analisi componenti", on_click=self._controller.handleAnalisiComp)
+        row2 = ft.Row([ft.Container(self.ddAlbum, width=300),
+                       ft.Container(self.btnAnalisiComp, width=300)],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row2)
 
         #row3
-        self.nIngegneri = ft.TextField(label="Numero ingegneri")
-        row3 = ft.Row([ft.Container(self.nIngegneri, width=300)], alignment=ft.MainAxisAlignment.CENTER)
+        self.soglia = ft.TextField(label="Soglia")
+        self.setAlbum = ft.ElevatedButton(text="Set di album", on_click=self._controller.handleSetAlbum)
+        row3 = ft.Row([ft.Container(self.soglia, width=300),
+                       ft.Container(self.setAlbum, width=300)], alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row3)
 
         self.txtGrafo = ft.ListView(expand=1)
-        self.txtGeniAd = ft.ListView(expand=1)
+        self.txtCompConnessa = ft.ListView(expand=1)
         self.txtSimulazione = ft.ListView(expand=1)
 
         self._page.add(self.txtGrafo)
-        self._page.add(self.txtGeniAd)
+        self._page.add(self.txtCompConnessa)
         self._page.add(self.txtSimulazione)
         self._page.update()
     @property
